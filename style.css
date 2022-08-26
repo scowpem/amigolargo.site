@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor:  #F5CF06;
+    --secondaryColor: #8E4106;
+    --white: #ffffff;
+    --sizePadding: 70px;
+    --fonteProjeto: 'Righteous', cursive;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--sizePadding);
+    padding-right: var(--sizePadding);
+    padding-bottom: 24px;
+    padding-left: var(--sizePadding);
+}
+
+header{
+    height: 48px;
+}
+
+.logoPokemon{
+    display: flex;
+    align-items: center;
+    gap: 20px;    
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-size: 32px;
+    font-family: var(--fonteProjeto);
+    font-style: normal;
+}
+
+main{
+    font-family: var(--fonteProjeto);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.imgPikachu{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title_pag{ 
+    position: relative;
+    grid-column: 1/-1;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_texto{
+    color: var(--white);
+    font-size: 20vw;
+}
+
+.title_texto_transparente{
+    font-size: 24vw;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-30%);
+    color: rgba(255, 255, 255, 0.2);
+
+}
+
+.description{
+    grid-column: 1/7;
+    place-self: center start;
+    color: var(--secondaryColor)
+}
+
+.description_title{
+    font-size: 4rem;
+}
+
+.description_text{
+    position: absolute;
+    font-size: 1.2rem;
+    width: 500px;
+}
+
+.action{
+    grid-column: 8/-1;
+    place-self: center end;
+    background-color: var(--secondaryColor);
+    height: 100px;
+    width: 411px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 3rem;
+    text-decoration: none;
+
+}
+
+footer{
+    font-family: var(--fonteProjeto);
+    text-align: center;
+    color: var(--secondaryColor);
+}
